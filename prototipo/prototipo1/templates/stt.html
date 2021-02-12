@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="{% static 'stt.css' %}" rel="stylesheet">
+</head>
+<body>
+    <table align="center" border="0" width="100%">
+        <tr>
+            <th>
+                    <h1 align="middle">Speech to text prototype</h1>
+            </th>
+        </tr>
+        <tr >
+            <th>
+                <div class="stt">
+                    <textarea disabled cols="100" rows="12" id="result"></textarea>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <button id="stt">Start</button>
+                <button id="stop">Stop</button>
+            </th>
+        </tr>
+    </table>
+    <table align="center" border="1" width="36%">
+        <thead>
+             <tr>
+                 <td align="middle" width="20%">
+                    <h5>Id</h5>
+                 </td>
+                 <td align="middle" width="20%">
+                     <h5>Dia</h5>
+                 </td>
+                 <td align="middle" width="10%">
+                    <h5>txt file</h5>
+                 </td>
+                 <td align="middle" width="40%">
+                     <h5>WAV file</h5>
+                 </td>
+                 <td align="middle" width="10%">
+                     <h5>delete</h5>
+                 </td>
+             </tr>
+        </thead>
+        <tbody  id="storage">
+        </tbody>
+    </table>
+    <script src="{% static 'stt.js' %}"></script>
+</body>
+</html>
